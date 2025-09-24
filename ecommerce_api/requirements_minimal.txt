@@ -1,0 +1,2 @@
+# Minimal requirements for simple HTTP server
+# This server uses only Python standard libraries

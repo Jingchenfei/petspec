@@ -1,0 +1,8 @@
+[user]
+	name = Jingchenfei
+	email = jing942703820@163.com
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f

@@ -1,0 +1,15 @@
+# 创建启动服务的批处理文件
+with open('启动服务.cmd', 'w', encoding='utf-8') as f:
+    f.write('@echo off\n')
+    f.write('REM 简单的API服务启动脚本\n')
+    f.write('cd /d "%~dp0"\n')
+    f.write('echo 正在启动API服务...\n')
+    f.write('python main.py\n')
+    f.write('if %errorlevel% neq 0 (\n')
+    f.write('    echo 服务启动失败！\n')
+    f.write('    echo 请按任意键退出...\n')
+    f.write('    pause >nul\n')
+    f.write(')\n')
+    f.write('echo 创建成功！按任意键退出...\n')
+    f.write('pause >nul\n')
+print("批处理文件 '启动服务.cmd' 创建成功！")
